@@ -1,12 +1,13 @@
-window.addEventListener("DOMContentLoaded" , () => {
+const form = document.getElementById("registration-form");
+
+document.addEventListener("DOMContentLoaded" , function () {
     // get elmentes---
-    const form = document.getElementById("registration-form"),
-    feedbackDiv = document.getElementById("form-feedback"),
+    const feedbackDiv = document.getElementById("form-feedback"),
     username = document.getElementById("username"),
     email = document.getElementById("email"),
     password = document.getElementById("password");
 
-    form.addEventListener("submit" , event => {
+    form.addEventListener("submit" , function (event) {
         event.preventDefault();
 
         // get values--
