@@ -38,17 +38,13 @@ document.addEventListener("DOMContentLoaded" , function () {
 
         // check valid---
         if(isValid){
-            feedbackDiv.style.cssText = `
-                display: block;
-                color : #28a745;
-            `;
+            feedbackDiv.style.display = "block";
+            feedbackDiv.style.color = "#28a745";
             feedbackDiv.textContent = "Registration successful!";
         }
         else {
-            feedbackDiv.style.cssText = `
-                display: block;
-                color : #dc3545;
-            `;
+            feedbackDiv.style.display = "block";
+            feedbackDiv.style.color = "#dc3545";
             feedbackDiv.innerHTML = messages.join("<br>");
         }
     })
