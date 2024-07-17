@@ -3,35 +3,35 @@ const form = document.getElementById("registration-form");
 document.addEventListener("DOMContentLoaded" , function () {
     // get elmentes---
     const feedbackDiv = document.getElementById("form-feedback"),
-    username = document.getElementById("username"),
-    email = document.getElementById("email"),
-    password = document.getElementById("password");
+    usernameInput = document.getElementById("username"),
+    emailInput = document.getElementById("email"),
+    passwordInput = document.getElementById("password");
 
     form.addEventListener("submit" , function (event) {
         event.preventDefault();
 
         // get values--
-        const usernameValue = username.value.trim(),
-        emailValue = email.value.trim(),
-        passwordValue = password.value.trim();
+        const username = usernameInput.value.trim(),
+        email = emailInput.value.trim(),
+        password = passwordInput.value.trim();
 
         // Validation values---
         let isValid = true, messages = [];
 
         // user validation---
-        if(usernameValue.length < 3){
+        if(username.length < 3){
             isValid = false;
             messages.push("username should be more tahn 3 letters");
         }
 
         // email validation--
-        if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(emailValue)) {
+        if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(email)) {
             isValid = false;
             messages.push("email is not valid");
         }
 
         // password validation--
-        if(passwordValue.length < 8){
+        if(password.length < 8){
             isValid = false;
             messages.push("password should be more than 6 letters");
         }
